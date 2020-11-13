@@ -25,5 +25,10 @@ const interval = setInterval(() => {
         <div><span> ${minutes} minutit</span></div>
         <div><span> ${seconds} sekondit</span></div>
         `;
+        
+        if(timeLeft< 0) {
+            clearInterval(interval);
+            countdown.innerHTML = "Happy Birthday!";
+        }
 
 }, 1000);
